@@ -10,27 +10,27 @@ else
   Q = @
 endif
 
-ifndef REV
+#ifndef REV
   REV = sysv
-endif
+#endif
 
-ifneq ($(REV), sysv)
-  ifneq ($(REV), systemd)
-    $(error REV must be 'sysv' (default) or 'systemd'.)
-  endif
-endif
+#ifneq ($(REV), sysv)
+#  ifneq ($(REV), systemd)
+#    $(error REV must be 'sysv' (default) or 'systemd'.)
+#  endif
+#endif
 
-ifeq ($(REV), sysv)
-  BASEDIR         ?= $(HOME)/public_html/lfs-book
-  PDF_OUTPUT      ?= LFS-BOOK.pdf
-  NOCHUNKS_OUTPUT ?= LFS-BOOK.html
+#ifeq ($(REV), sysv)
+  BASEDIR         ?= $(HOME)/public_html/sysv-book
+  PDF_OUTPUT      ?= SYSV-BOOK.pdf
+  NOCHUNKS_OUTPUT ?= SYSV-BOOK.html
   DUMPDIR         ?= $(HOME)/lfs-commands
-else
-  BASEDIR         ?= $(HOME)/public_html/lfs-systemd
-  PDF_OUTPUT      ?= LFS-SYSD-BOOK.pdf
-  NOCHUNKS_OUTPUT ?= LFS-SYSD-BOOK.html
-  DUMPDIR         ?= $(HOME)/lfs-sysd-commands
-endif
+#else
+#  BASEDIR         ?= $(HOME)/public_html/lfs-systemd
+#  PDF_OUTPUT      ?= LFS-SYSD-BOOK.pdf
+#  NOCHUNKS_OUTPUT ?= LFS-SYSD-BOOK.html
+#  DUMPDIR         ?= $(HOME)/lfs-sysd-commands
+#endif
 
 book: validate profile-html
 	@echo "Generating chunked XHTML files at $(BASEDIR)/ ..."
@@ -39,7 +39,7 @@ book: validate profile-html
       --stringparam rootid "$(ROOT_ID)"          \
       --stringparam base.dir $(BASEDIR)/         \
       stylesheets/lfs-chunked.xsl                \
-      $(RENDERTMP)/lfs-html.xml
+      $(RENDERTMP)/sysv-html.xml
 
 	@echo "Copying CSS code and images..."
 	$(Q)mkdir -p $(BASEDIR)/stylesheets
@@ -64,19 +64,19 @@ pdf: validate
 	@echo "Generating profiled XML for PDF..."
 	$(Q)xsltproc --nonet \
                 --stringparam profile.condition pdf \
-                --output $(RENDERTMP)/lfs-pdf.xml   \
+                --output $(RENDERTMP)/sysv-pdf.xml   \
                 stylesheets/lfs-xsl/profile.xsl     \
-                $(RENDERTMP)/lfs-full.xml
+                $(RENDERTMP)/sysv-full.xml
 
 	@echo "Generating FO file..."
 	$(Q)xsltproc --nonet                           \
                  --stringparam rootid "$(ROOT_ID)" \
-                 --output $(RENDERTMP)/lfs-pdf.fo  \
+                 --output $(RENDERTMP)/sysv-pdf.fo  \
                  stylesheets/lfs-pdf.xsl           \
-                 $(RENDERTMP)/lfs-pdf.xml
+                 $(RENDERTMP)/sysv-pdf.xml
 
-	$(Q)sed -i -e 's/span="inherit"/span="all"/' $(RENDERTMP)/lfs-pdf.fo
-	$(Q)bash pdf-fixups.sh $(RENDERTMP)/lfs-pdf.fo
+	$(Q)sed -i -e 's/span="inherit"/span="all"/' $(RENDERTMP)/sysv-pdf.fo
+	$(Q)bash pdf-fixups.sh $(RENDERTMP)/sys5-pdf.fo
 
 	@echo "Generating PDF file..."
 	$(Q)mkdir -p $(RENDERTMP)/images
@@ -84,7 +84,7 @@ pdf: validate
 
 	$(Q)mkdir -p $(BASEDIR)
 
-	$(Q)fop -q  $(RENDERTMP)/lfs-pdf.fo $(BASEDIR)/$(PDF_OUTPUT) 2>fop.log
+	$(Q)fop -q  $(RENDERTMP)/sysv-pdf.fo $(BASEDIR)/$(PDF_OUTPUT) 2>fop.log
 	@echo "$(BASEDIR)/$(PDF_OUTPUT) created"
 	@echo "fop.log created"
 
@@ -94,7 +94,7 @@ nochunks: validate profile-html
                 --stringparam rootid "$(ROOT_ID)"      \
                 --output $(BASEDIR)/$(NOCHUNKS_OUTPUT) \
                 stylesheets/lfs-nochunks.xsl           \
-                $(RENDERTMP)/lfs-html.xml
+                $(RENDERTMP)/sysv-html.xml
 
 	@echo "Running Tidy..."
 	$(Q)tidy -config tidy.conf $(BASEDIR)/$(NOCHUNKS_OUTPUT) || test $$? -le 1
@@ -111,7 +111,7 @@ nochunks: validate profile-html
 tmpdir:
 	@echo "Creating and cleaning $(RENDERTMP)"
 	$(Q)mkdir -p $(RENDERTMP)
-	$(Q)rm -f $(RENDERTMP)/lfs*.xml
+	$(Q)rm -f $(RENDERTMP)/*.xml
 	$(Q)rm -f $(RENDERTMP)/*wget*
 	$(Q)rm -f $(RENDERTMP)/*md5sum*
 	$(Q)rm -f $(RENDERTMP)/*pdf.fo
@@ -120,11 +120,11 @@ validate: tmpdir version
 	@echo "Processing bootscripts..."
 	$(Q)bash process-scripts.sh
 
-	@echo "Adjusting for revision $(REV)..."
+#	@echo "Adjusting for revision $(REV)..."
 	$(Q)xsltproc --nonet                               \
                 --xinclude                            \
                 --stringparam profile.revision $(REV) \
-                --output $(RENDERTMP)/lfs-html2.xml   \
+                --output $(RENDERTMP)/sysv-html2.xml   \
                 stylesheets/lfs-xsl/profile.xsl       \
                 index.xml
 
@@ -132,20 +132,20 @@ validate: tmpdir version
 	$(Q)xmllint --nonet                            \
                --encode UTF-8                     \
                --postvalid                        \
-               --output $(RENDERTMP)/lfs-full.xml \
-               $(RENDERTMP)/lfs-html2.xml
+               --output $(RENDERTMP)/sysv-full.xml \
+               $(RENDERTMP)/sysv-html2.xml
 
 	$(Q)rm -f appendices/*.script
-	$(Q)./aux-file-data.sh $(RENDERTMP)/lfs-full.xml
+	$(Q)./aux-file-data.sh $(RENDERTMP)/sysv-full.xml
 	@echo "Validation complete."
 
 profile-html: validate
 	@echo "Generating profiled XML for XHTML..."
 	$(Q)xsltproc --nonet                              \
                 --stringparam profile.condition html \
-                --output $(RENDERTMP)/lfs-html.xml   \
+                --output $(RENDERTMP)/sysv-html.xml   \
                 stylesheets/lfs-xsl/profile.xsl      \
-                $(RENDERTMP)/lfs-full.xml
+                $(RENDERTMP)/sysv-full.xml
 
 DOWNLOADS_DEP = chapter03/packages.xml chapter03/patches.xml \
                 packages.ent patches.ent general.ent
@@ -203,7 +203,7 @@ dump-commands: validate
 
 	$(Q)xsltproc --output $(DUMPDIR)/          \
                 stylesheets/dump-commands.xsl \
-                $(RENDERTMP)/lfs-full.xml
+                $(RENDERTMP)/sysv-full.xml
 	@echo "Dumping book commands complete in $(DUMPDIR)"
 
 all: book nochunks pdf dump-commands
