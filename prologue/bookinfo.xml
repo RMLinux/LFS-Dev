@@ -6,7 +6,7 @@
 ]>
 
 <bookinfo>
-  <title>Linux From Scratch</title>
+  <title>RMLinux</title>
   <subtitle>Version &version;</subtitle>
   <subtitle>Published &releasedate;</subtitle>
 
@@ -16,21 +16,10 @@
       <surname>Beekmans</surname>
     </author>
     <author>
-      <firstname>Managing Editor: Bruce</firstname>
-      <surname>Dubbs</surname>
-    </author>
-
-    <author revision="systemd">
-      <firstname>Editor: Douglas R.</firstname>
-      <surname>Reno</surname>
-    </author>
-
-    <author revision="systemd">
-      <firstname>Editor: DJ</firstname>
-      <surname>Lucas</surname>
+      <firstname>Managing Editor: Randy</firstname>
+      <surname>McMurchy</surname>
     </author>
   </authorgroup>
-
   <copyright id="copyright">
     <year>&copyrightdate;</year>
     <holder>Gerard Beekmans</holder>

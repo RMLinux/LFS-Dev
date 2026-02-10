@@ -10,23 +10,21 @@
 
   <title>Errata and Security Advisories</title>
 
-  <para>The software used to create an LFS system is constantly being updated
+  <para>The software used to create an RMLinux system is constantly being updated
   and enhanced. Security warnings and bug fixes may become available after
-  the LFS book has been released. To check whether the package versions or
-  instructions in this release of LFS need any modifications&mdash;to repair
+  the RMLinux book has been released. To check whether the package versions or
+  instructions in this release of RMLinux need any modifications&mdash;to repair
   security vulnerabilities or to fix other bugs&mdash;please visit
-  <ulink url="&errata;"/>
-  before proceeding with your build. You should note any
+  <ulink url="&errata;"/> before proceeding with your build. You should note any
   changes shown and apply them to the relevant sections of the book as you
-  build the LFS system.</para>
+  build the RMLinux system.</para>
 
-  <para>In addition, the Linux From Scratch editors maintain a list of security
-  vulnerabilities discovered <emphasis>after</emphasis> a book has been released. To read the list, please visit
-  <ulink url="&secadv;"/> before proceeding with your build. You should apply
-  the changes suggested by the advisories to the relevant sections of the
-  book as you build the LFS system.  And, if you will use the LFS system as
-  a real desktop or server system, you should continue to consult the
-  advisories and fix any security vulnerabilities, even when the LFS system
-  has been completely constructed.</para>
-
+  <para>In addition, the RMLinux editors maintain a list of security
+  vulnerabilities discovered <emphasis>after</emphasis> a book has been released.
+  To read the list, please visit <ulink url="&secadv;"/> before proceeding with
+  your build. You should apply the changes suggested by the advisories to the
+  relevant sections of the book as you build the RMLinux system. And, if you
+  will use the RMLinux system as a real desktop or server system, you should
+  continue to consult the advisories and fix any security vulnerabilities,
+  even when the RMLInux system has been completely built.</para>
 </sect1>

@@ -10,22 +10,23 @@
 
   <title>Prerequisites</title>
 
-  <para>Building an LFS system is not a simple task. It requires a certain
+  <para>Building an RMLinux system is not a simple task. It requires a certain
   level of existing knowledge of Unix system administration in order to resolve
   problems and correctly execute the commands listed. In particular, as an
   absolute minimum, you should already know how to use the
   command line (shell) to copy or move files and directories, list directory
   and file contents, and change the current directory. It is also expected that
-  you know how to use and install Linux
-  software.</para>
+  you know how to use and install Linux software.</para>
 
-  <para>Because the LFS book assumes <emphasis>at least</emphasis> this basic
-  level of skill, the various LFS support forums are unlikely to
-  provide you with much assistance in these areas. You will find that your
-  questions regarding such basic knowledge will likely go unanswered (or you
-  will simply be referred to the LFS essential pre-reading list).</para>
+  <para>Because the RMLinux book assumes <emphasis>at least</emphasis> this
+  basic level of skill, various support forums are unlikely to provide you
+  with much assistance in these areas. You will find that your questions
+  regarding such basic knowledge will likely go unanswered (or you will simply
+  be referred to the RMLinux essential pre-reading list).</para>
 
-  <para>Before building an LFS system, we urge you to read these articles:</para>
+  
+  <para>Before building an RMLinux system, please consider familiarizing yourself
+  with the following articles:</para>
 
   <itemizedlist>
     <listitem>

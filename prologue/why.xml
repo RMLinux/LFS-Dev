@@ -10,11 +10,11 @@
 
   <title>Rationale for Packages in the Book</title>
 
-    <para>The goal of LFS is to build a complete and usable
+    <para>The goal of RMLinux is to build a complete and usable
     foundation-level system&mdash;including all the packages needed to replicate
     itself&mdash;and providing a relatively minimal base from which to customize
     a more complete system based on the user's choices.  This does not
-    mean that LFS is the smallest system possible.  Several important packages
+    mean that RMLinux is the smallest system possible.  Several important packages
     are included that are not, strictly speaking, required.  The list below documents the
     reasons each package in the book has been included.</para>
 
@@ -75,21 +75,21 @@
 
         <para>This package supplies a linker, an assembler, and other
         tools for handling object files. The programs in this package are
-        needed to compile most of the packages in an LFS system.</para>
+        needed to compile most of the packages in an RMLinux system.</para>
       </listitem>
 
       <listitem>
         <para>Bison</para>
 
         <para>This package contains the GNU version of yacc (Yet Another
-        Compiler Compiler) needed to build several of the LFS programs.</para>
+        Compiler Compiler) needed to build several of the RMLinux programs.</para>
       </listitem>
 
       <listitem>
         <para>Bzip2</para>
 
         <para>This package contains programs for compressing and decompressing
-        files.  It is required to decompress many LFS packages.</para>
+        files.  It is required to decompress many RMLinux packages.</para>
       </listitem>
 <!--
       <listitem>
@@ -104,7 +104,7 @@
         <para>This package contains a number of essential programs for viewing
         and manipulating files and directories. These programs are needed for
         command line file management, and are necessary for the installation
-        procedures of every package in LFS.</para>
+        procedures of every package in RMLinux.</para>
       </listitem>
 
       <listitem revision="systemd">
@@ -172,7 +172,7 @@
         <para>This package contains a utility for generating programs that
         recognize patterns in text.  It is the GNU version of the lex
         (lexical analyzer) program.  It is required to build several
-        LFS packages.</para>
+        RMLinux packages.</para>
       </listitem>
 
       <listitem>
@@ -187,7 +187,7 @@
         <para>GCC</para>
 
         <para>This is the Gnu Compiler Collection.  It contains the
-        C and C++ compilers as well as several others not built by LFS.
+        C and C++ compilers as well as several others not built by RMLinux.
         </para>
       </listitem>
 
@@ -195,7 +195,7 @@
         <para>GDBM</para>
 
         <para>This package contains the GNU Database Manager library.  It
-        is used by one other LFS package, Man-DB.</para>
+        is used by one other RMLinux package, Man-DB.</para>
       </listitem>
 
       <listitem>
@@ -255,7 +255,7 @@
 
         <para>This package contains programs for compressing and
         decompressing files. It is needed to decompress many packages
-        in LFS.</para>
+        in RMLinux.</para>
       </listitem>
 
       <listitem>
@@ -361,7 +361,7 @@
         <para>This package contains the GNU generic library support
         script. It wraps the complexity of using shared libraries into a
         consistent, portable interface.  It is needed by the test
-        suites in other LFS packages.</para>
+        suites in other RMLinux packages.</para>
       </listitem>
 
       <listitem>
@@ -393,7 +393,7 @@
         <para>Make</para>
 
         <para>This package contains a program for directing the building
-        of packages.  It is required by almost every package in LFS.</para>
+        of packages.  It is required by almost every package in RMLinux.</para>
       </listitem>
 
       <listitem revision="systemd">
@@ -460,7 +460,7 @@
         <para>This package contains libraries for terminal-independent
         handling of character screens.  It is often used to provide
         cursor control for a menuing system. It is needed by a number of
-        the packages in LFS.</para>
+        the packages in RMLinux.</para>
       </listitem>
 
       <listitem>
@@ -477,7 +477,7 @@
         <para>This package contains a program for modifying or creating files by
         applying a <emphasis>patch</emphasis> file typically created
         by the <application>diff</application> program.  It is needed by
-        the build procedure for several LFS packages.</para>
+        the build procedure for several RMLinux packages.</para>
       </listitem>
 
       <listitem>
@@ -492,7 +492,7 @@
         <para>Perl</para>
 
         <para>This package is an interpreter for the runtime language
-        PERL. It is needed for the installation and test suites of several LFS
+        PERL. It is needed for the installation and test suites of several RMLinux 
         packages.</para>
       </listitem>
 
@@ -512,7 +512,7 @@
 
         <para>This package contains programs for monitoring processes. These
         programs are useful for system administration, and are also used by
-        the LFS Bootscripts.</para>
+        the RMLinux Bootscripts.</para>
       </listitem>
 
       <listitem>
@@ -542,7 +542,7 @@
         <para>Sed</para>
 
         <para>This package allows editing of text without opening it in a
-        text editor. It is also needed by many LFS packages' configure
+        text editor. It is also needed by many RMLinux packages' configure
         scripts.</para>
       </listitem>
 
@@ -598,7 +598,7 @@
         <para>Tar</para>
 
         <para>This package provides archiving and extraction capabilities
-        of virtually all the packages used in LFS.</para>
+        of virtually all the packages used in RMLinux.</para>
       </listitem>
 
       <listitem>
@@ -613,7 +613,7 @@
 
         <para>This package supplies programs for reading, writing, and
         converting info pages.  It is used in the installation
-        procedures of many LFS packages.</para>
+        procedures of many RMLinux packages.</para>
       </listitem>
 
       <listitem>
