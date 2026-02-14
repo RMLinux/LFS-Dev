@@ -12,8 +12,7 @@
 
   <para>To make things easier to follow, there are a few typographical
   conventions used throughout this book. This section contains some
-  examples of the typographical format found throughout Linux From
-  Scratch.</para>
+  examples of the typographical format found throughout RMLinux.</para>
 
 <screen role="nodump"><userinput>./configure --prefix=/usr</userinput></screen>
 
@@ -51,9 +50,9 @@
   <para>This form of text is used for several purposes in the book. Its main
   purpose is to emphasize important points or items.</para>
 
-  <para><ulink url="&lfs-root;"/></para>
+  <para><ulink url="https://rmlinux.org/"/></para>
 
-  <para>This format is used for hyperlinks both within the LFS community and to
+  <para>This format is used for hyperlinks both within the RMLinux suite and to
   external pages. It includes HOWTOs, download locations, and websites.</para>
 
 <screen role="nodump"><userinput>cat &gt; $LFS/etc/group &lt;&lt; "EOF"
@@ -79,10 +78,10 @@ EOF</userinput></screen>
 
   <para><ulink role='man' url='&man;passwd.5'>passwd(5)</ulink></para>
 
-  <para>This format is used to refer to a specific manual (man) page. The number inside parentheses
-  indicates a specific section inside the manuals. For example,
-  <command>passwd</command> has two man pages. Per LFS installation instructions,
-  those two man pages will be located at
+  <para>This format is used to refer to a specific manual (man) page. The
+  number inside parentheses indicates a specific section inside the manuals.
+  For example, <command>passwd</command> has two man pages. Per RMLinux
+  installation instructions, those two man pages will be located at
   <filename>/usr/share/man/man1/passwd.1</filename> and
   <filename>/usr/share/man/man5/passwd.5</filename>. When the book uses
   <ulink role='man' url='&man;/passwd.5'>passwd(5)</ulink> it is
@@ -93,7 +92,7 @@ EOF</userinput></screen>
   need to run <command>man 5 passwd</command> in order to read the page
   being specified. Note that most man pages do not have duplicate
   page names in different sections. Therefore, <command>man <replaceable>&lt;program
-  name&gt;</replaceable></command> is generally sufficient.  In the LFS
+  name&gt;</replaceable></command> is generally sufficient.  In the RMLinux
   book these references to man pages are also hyperlinks, so clicking on
   such a reference will open the man page rendered in HTML from
   <ulink url='https://man.archlinux.org/'>Arch Linux manual

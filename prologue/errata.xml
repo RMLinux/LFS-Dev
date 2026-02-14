@@ -10,7 +10,7 @@
 
   <title>Errata and Security Advisories</title>
 
-  <para>The software used to create an RMLinux system is constantly being updated
+  <!--  <para>The software used to create an RMLinux system is constantly being updated
   and enhanced. Security warnings and bug fixes may become available after
   the RMLinux book has been released. To check whether the package versions or
   instructions in this release of RMLinux need any modifications&mdash;to repair
@@ -18,8 +18,14 @@
   <ulink url="&errata;"/> before proceeding with your build. You should note any
   changes shown and apply them to the relevant sections of the book as you
   build the RMLinux system.</para>
+  -->
 
-  <para>In addition, the RMLinux editors maintain a list of security
+  <para>This is the initial version of the RMLinux book, and there are no errata.
+  As security implications are discovered in this book, they will be fixed as soon
+  as possible.
+  </para>
+
+  <para>In addition, the Linux From Scratch editors maintain a list of security
   vulnerabilities discovered <emphasis>after</emphasis> a book has been released.
   To read the list, please visit <ulink url="&secadv;"/> before proceeding with
   your build. You should apply the changes suggested by the advisories to the

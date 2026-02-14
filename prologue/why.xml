@@ -425,7 +425,7 @@
         <para>This package provides a software tool for automating the building
         of software. The main goal of Meson is to minimize the amount of time
         that software developers need to spend configuring a build
-        system.  It's required to build Systemd, as well as many BLFS
+        system.  It's required to build Systemd, as well as many More-RMLinux
         packages.</para>
 
       </listitem>

@@ -10,7 +10,7 @@ else
   Q = @
 endif
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 #ifndef REV
   REV = sysv
 #endif
@@ -20,7 +20,7 @@ endif
 #    $(error REV must be 'sysv' (default) or 'systemd'.)
 #  endif
 #endif
-=======
+#=======
 ifndef REV
   REV = systemd
 endif
@@ -30,7 +30,7 @@ ifneq ($(REV), sysv)
     $(error REV must be 'sysv' or 'systemd' (default).)
   endif
 endif
->>>>>>> trunk
+#>>>>>>> trunk
 
 #ifeq ($(REV), sysv)
   BASEDIR         ?= $(HOME)/public_html/sysv-book
