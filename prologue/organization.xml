@@ -16,7 +16,7 @@
     <title>Part I - Introduction</title>
 
     <para>Part I explains a few important notes on how to proceed with the
-    LFS installation.  This section also provides meta-information about
+    RMLinux installation.  This section also provides meta-information about
     the book.</para>
   </sect2>
 
@@ -29,16 +29,16 @@
   </sect2>
 
   <sect2>
-    <title>Part III - Building the LFS Cross Toolchain and Temporary Tools</title>
+    <title>Part III - Building the RMLinux Cross Toolchain and Temporary Tools</title>
 
     <para>Part III provides instructions for building the tools
-    needed for constructing the final LFS system.</para>
+    needed for constructing the final RMLinux system.</para>
   </sect2>
 
   <sect2>
-    <title>Part IV - Building the LFS System</title>
+    <title>Part IV - Building the RMLinux System</title>
 
-    <para>Part IV guides the reader through the building of the LFS
+    <para>Part IV guides the reader through the building of the RMLinux
     system&mdash;compiling and installing all the packages one by one,
     setting up the boot scripts, and installing the kernel. The resulting
     Linux system is the foundation on which other software can be built to
@@ -52,7 +52,7 @@
 
     <para>Part V provides information about the book itself including
     acronyms and terms, acknowledgments, package dependencies,
-    a listing of LFS boot scripts, licenses for the distribution of the
+    a listing of RMLinux boot scripts, licenses for the distribution of the
     book, and a comprehensive index of packages, programs, libraries,
     and scripts.</para>
   </sect2>
